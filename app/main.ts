@@ -84,19 +84,19 @@ async function startExplorer() {
 	explorer.getApp().use(helmet.noSniff());
 	/* eslint-disable */
 	explorer.getApp().use(helmet.frameguard({ action: 'SAMEORIGIN' }));
-	explorer.getApp().use(
-		helmet.contentSecurityPolicy({
-			directives: {
-				defaultSrc: ["'self'"],
-				styleSrc: ["'self'", "'unsafe-inline'"],
-				scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
-				objectSrc: ["'self'"],
-				frameSrc: ["'self'"],
-				fontSrc: ["'self'"],
-				imgSrc: ["'self' data: https:; "]
-			}
-		})
-	);
+	// explorer.getApp().use(
+	// 	helmet.contentSecurityPolicy({
+	// 		directives: {
+	// 			defaultSrc: ["'self'"],
+	// 			styleSrc: ["'self'", "'unsafe-inline'"],
+	// 			scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+	// 			objectSrc: ["'self'"],
+	// 			frameSrc: ["'self'"],
+	// 			fontSrc: ["'self'"],
+	// 			imgSrc: ["'self' data: https:; "]
+	// 		}
+	// 	})
+	// );
 	/* eslint-enable */
 	// Application headers
 
